@@ -6,99 +6,205 @@
 <title>Civil Engineering Hub</title>
 
 <style>
-    body {
-        margin: 0;
-        font-family: Arial, sans-serif;
-        background-color: #111;
-        color: #fff;
-    }
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #111;
+    color: #fff;
+}
 
-    .header {
-        background-color: #D40000;
-        padding: 20px;
-        text-align: center;
-        font-size: 28px;
-        font-weight: bold;
-        letter-spacing: 2px;
-    }
+/* HEADER */
+.header {
+    background-color: #D40000;
+    padding: 20px;
+    text-align: center;
+    font-size: 28px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
 
-    .menu {
-        position: absolute;
-        top: 20px;
-        left: 20px;
-        cursor: pointer;
-    }
+/* MENU */
+.menu {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    cursor: pointer;
+}
 
-    .menu div {
-        width: 30px;
-        height: 4px;
-        background: white;
-        margin: 5px 0;
-    }
+.menu div {
+    width: 30px;
+    height: 4px;
+    background: white;
+    margin: 5px 0;
+}
 
-    .dropdown {
-        display: none;
-        position: absolute;
-        top: 60px;
-        left: 20px;
-        background-color: #222;
-        border: 1px solid #555;
-        width: 220px;
-    }
+.dropdown {
+    display: none;
+    position: absolute;
+    top: 60px;
+    left: 20px;
+    background-color: #222;
+    border: 1px solid #555;
+    width: 220px;
+}
 
-    .dropdown a {
-        display: block;
-        padding: 12px;
-        text-decoration: none;
-        color: white;
-        border-bottom: 1px solid #444;
-    }
+.dropdown a {
+    display: block;
+    padding: 12px;
+    text-decoration: none;
+    color: white;
+    border-bottom: 1px solid #444;
+}
 
-    .dropdown a:hover {
-        background-color: #D40000;
-    }
+.dropdown a:hover {
+    background-color: #D40000;
+}
 
-    .container {
-        display: flex;
-        flex-wrap: wrap;
-    }
+/* LAYOUT */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+}
 
-    .sidebar {
-        width: 30%;
-        background-color: #1a1a1a;
-        padding: 20px;
-        border-right: 2px solid #D40000;
-    }
+.sidebar {
+    width: 30%;
+    background-color: #1a1a1a;
+    padding: 20px;
+    border-right: 2px solid #D40000;
+}
 
-    .main {
-        width: 70%;
-        padding: 20px;
-    }
+.main {
+    width: 70%;
+    padding: 20px;
+}
 
-    h2 {
-        color: #FFD700;
-    }
+h2 {
+    color: #FFD700;
+}
 
-    /* IMAGE SECTION */
-    .image-section {
-        width: 100%;
-        margin-top: 30px;
-        text-align: center;
-    }
+/* 🔥 FUN SECTION */
+.fun-section {
+    text-align: center;
+    padding: 40px;
+    background: #181818;
+    border-top: 2px solid #D40000;
+}
 
-    .image-section img {
-        width: 90%;
-        max-width: 900px;
-        border: 3px solid #D40000;
-        border-radius: 10px;
-    }
+/* 🔴 MODERN 3D CIRCULAR BUTTONS */
+.btn-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 20px;
+}
 
-    .caption {
-        margin-top: 10px;
-        color: #ccc;
-        font-size: 14px;
-    }
+.btn {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
 
+    background: linear-gradient(145deg, #ffffff, #dcdcdc);
+    color: #111;
+    font-weight: bold;
+    font-size: 14px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    box-shadow: 
+        8px 8px 15px rgba(0,0,0,0.4),
+        -5px -5px 10px rgba(255,255,255,0.1);
+
+    transition: all 0.25s ease;
+}
+
+.btn:hover {
+    transform: translateY(-8px) scale(1.05);
+    background: linear-gradient(145deg, #ff2a2a, #b80000);
+    color: white;
+
+    box-shadow: 
+        12px 12px 20px rgba(0,0,0,0.6),
+        0 0 15px rgba(255,0,0,0.6);
+}
+
+.btn:active {
+    transform: translateY(2px) scale(0.98);
+
+    box-shadow: 
+        inset 5px 5px 10px rgba(0,0,0,0.5),
+        inset -3px -3px 8px rgba(255,255,255,0.1);
+}
+
+/* 🌉 BRIDGE */
+.bridge {
+    margin: 30px auto;
+    width: 300px;
+    height: 200px;
+    position: relative;
+}
+
+.part {
+    opacity: 0;
+    transition: 0.5s;
+}
+
+#foundation {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 25px;
+    background: #555;
+}
+
+#pillars {
+    position: absolute;
+    bottom: 25px;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: space-around;
+}
+
+#pillars::before, #pillars::after {
+    content: "";
+    width: 20px;
+    height: 80px;
+    background: #aaa;
+}
+
+#deck {
+    position: absolute;
+    bottom: 105px;
+    width: 100%;
+    height: 20px;
+    background: #222;
+}
+
+/* IMAGE */
+.image-section {
+    width: 100%;
+    margin-top: 30px;
+    text-align: center;
+}
+
+.image-section img {
+    width: 90%;
+    max-width: 900px;
+    border: 3px solid #D40000;
+    border-radius: 10px;
+}
+
+.caption {
+    margin-top: 10px;
+    color: #ccc;
+    font-size: 14px;
+}
 </style>
 </head>
 
@@ -126,11 +232,7 @@
 
     <div class="sidebar">
         <h2>About</h2>
-        <p>
-            Civil engineering is the backbone of infrastructure development. 
-            It focuses on designing, constructing, and maintaining structures 
-            such as roads, bridges, dams, and buildings.
-        </p>
+        <p>Civil engineering focuses on designing and building infrastructure like roads, bridges, and buildings.</p>
 
         <h2>Fields</h2>
         <ul>
@@ -143,36 +245,70 @@
 
     <div class="main">
         <h2>Welcome</h2>
-        <p>
-            This website showcases the importance of civil engineering in shaping 
-            modern society. From skyscrapers to highways, engineers turn ideas 
-            into reality.
-        </p>
+        <p>Engineers shape modern society through innovation and infrastructure.</p>
 
         <h2>Why It Matters</h2>
-        <p>
-            Without civil engineering, cities would not function efficiently. 
-            Engineers ensure safety, sustainability, and innovation in infrastructure.
-        </p>
+        <p>Ensures safety, sustainability, and efficient cities.</p>
     </div>
 
 </div>
 
-<!-- IMAGE SECTION -->
+<!-- 🔥 FUN INTERACTIVE -->
+<div class="fun-section">
+    <h2>Build a Bridge 🏗️</h2>
+    <p>Click in order to construct a stable bridge!</p>
+
+    <div class="btn-container">
+        <button class="btn" onclick="build('foundation')">Foundation</button>
+        <button class="btn" onclick="build('pillars')">Pillars</button>
+        <button class="btn" onclick="build('deck')">Deck</button>
+    </div>
+
+    <div class="bridge">
+        <div id="foundation" class="part"></div>
+        <div id="pillars" class="part"></div>
+        <div id="deck" class="part"></div>
+    </div>
+
+    <p id="status"></p>
+</div>
+
+<!-- IMAGE -->
 <div class="image-section">
     <h2>Engineering in Action</h2>
     <img src="image.jpg" alt="Bridge Engineering">
-    <div class="caption">A masterpiece of structural engineering: bridges connect people and places.</div>
+    <div class="caption">A masterpiece of structural engineering.</div>
 </div>
 
 <script>
+let step = 0;
+
 function toggleMenu() {
     var menu = document.getElementById("dropdownMenu");
-    if (menu.style.display === "block") {
-        menu.style.display = "none";
+    menu.style.display = (menu.style.display === "block") ? "none" : "block";
+}
+
+function build(part) {
+    const order = ["foundation", "pillars", "deck"];
+
+    if (part === order[step]) {
+        document.getElementById(part).style.opacity = "1";
+        step++;
+
+        if (step === 3) {
+            document.getElementById("status").innerHTML = "✅ Bridge Complete!";
+        }
     } else {
-        menu.style.display = "block";
+        document.getElementById("status").innerHTML = "❌ Wrong order! Start again.";
+        resetBridge();
     }
+}
+
+function resetBridge() {
+    step = 0;
+    document.getElementById("foundation").style.opacity = 0;
+    document.getElementById("pillars").style.opacity = 0;
+    document.getElementById("deck").style.opacity = 0;
 }
 </script>
 
