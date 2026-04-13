@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Civil Engineering Hub</title>
+
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-color: #111;
+        color: #fff;
+    }
+
+    .header {
+        background-color: #D40000;
+        padding: 20px;
+        text-align: center;
+        font-size: 28px;
+        font-weight: bold;
+        letter-spacing: 2px;
+    }
+
+    .menu {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        cursor: pointer;
+    }
+
+    .menu div {
+        width: 30px;
+        height: 4px;
+        background: white;
+        margin: 5px 0;
+    }
+
+    .dropdown {
+        display: none;
+        position: absolute;
+        top: 60px;
+        left: 20px;
+        background-color: #222;
+        border: 1px solid #555;
+        width: 220px;
+    }
+
+    .dropdown a {
+        display: block;
+        padding: 12px;
+        text-decoration: none;
+        color: white;
+        border-bottom: 1px solid #444;
+    }
+
+    .dropdown a:hover {
+        background-color: #D40000;
+    }
+
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .sidebar {
+        width: 30%;
+        background-color: #1a1a1a;
+        padding: 20px;
+        border-right: 2px solid #D40000;
+    }
+
+    .main {
+        width: 70%;
+        padding: 20px;
+    }
+
+    h2 {
+        color: #FFD700;
+    }
+
+    /* IMAGE SECTION */
+    .image-section {
+        width: 100%;
+        margin-top: 30px;
+        text-align: center;
+    }
+
+    .image-section img {
+        width: 90%;
+        max-width: 900px;
+        border: 3px solid #D40000;
+        border-radius: 10px;
+    }
+
+    .caption {
+        margin-top: 10px;
+        color: #ccc;
+        font-size: 14px;
+    }
+
+</style>
+</head>
+
+<body>
+
+<div class="menu" onclick="toggleMenu()">
+    <div></div>
+    <div></div>
+    <div></div>
+</div>
+
+<div class="dropdown" id="dropdownMenu">
+    <a href="https://en.wikipedia.org/wiki/Civil_engineering" target="_blank">Civil Engineering</a>
+    <a href="https://en.wikipedia.org/wiki/Structural_engineering" target="_blank">Structural Engineering</a>
+    <a href="https://en.wikipedia.org/wiki/Geotechnical_engineering" target="_blank">Geotechnical Engineering</a>
+    <a href="https://en.wikipedia.org/wiki/Transportation_engineering" target="_blank">Transportation Engineering</a>
+</div>
+
+<div class="header">
+    CIVIL ENGINEERING HUB<br>
+    <small>Building the Future, Structuring the World</small>
+</div>
+
+<div class="container">
+
+    <div class="sidebar">
+        <h2>About</h2>
+        <p>
+            Civil engineering is the backbone of infrastructure development. 
+            It focuses on designing, constructing, and maintaining structures 
+            such as roads, bridges, dams, and buildings.
+        </p>
+
+        <h2>Fields</h2>
+        <ul>
+            <li>Structural Engineering</li>
+            <li>Geotechnical Engineering</li>
+            <li>Transportation Engineering</li>
+            <li>Environmental Engineering</li>
+        </ul>
+    </div>
+
+    <div class="main">
+        <h2>Welcome</h2>
+        <p>
+            This website showcases the importance of civil engineering in shaping 
+            modern society. From skyscrapers to highways, engineers turn ideas 
+            into reality.
+        </p>
+
+        <h2>Why It Matters</h2>
+        <p>
+            Without civil engineering, cities would not function efficiently. 
+            Engineers ensure safety, sustainability, and innovation in infrastructure.
+        </p>
+    </div>
+
+</div>
+
+<!-- IMAGE SECTION -->
+<div class="image-section">
+    <h2>Engineering in Action</h2>
+    <img src="image.jpg" alt="Bridge Engineering">
+    <div class="caption">A masterpiece of structural engineering: bridges connect people and places.</div>
+</div>
+
+<script>
+function toggleMenu() {
+    var menu = document.getElementById("dropdownMenu");
+    if (menu.style.display === "block") {
+        menu.style.display = "none";
+    } else {
+        menu.style.display = "block";
+    }
+}
+</script>
+
+</body>
+</html>
